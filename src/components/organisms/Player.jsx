@@ -11,6 +11,7 @@ const VideoTrailer = (id) => {
         <ReactPlayer
             url={`https://www.youtube.com/watch?v=${value}`}
             width="100%"
+            playing={true}
         />
     </>
   );

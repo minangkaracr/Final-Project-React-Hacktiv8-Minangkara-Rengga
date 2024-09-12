@@ -1,8 +1,6 @@
-import { token } from "../../token/token";
-
 export const getMovieNowPlaying = () => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/now_playing";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -32,7 +30,7 @@ export const getMovieNowPlaying = () => async dispatch => {
 
 export const getMovieTopRated = () => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/top_rated";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -62,7 +60,7 @@ export const getMovieTopRated = () => async dispatch => {
 
 export const getMovieTrendingDay = () => async dispatch => {
   const api = "https://api.themoviedb.org/3/trending/movie/day";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -92,7 +90,7 @@ export const getMovieTrendingDay = () => async dispatch => {
 
 export const getMovieTrendingWeek = () => async dispatch => {
   const api = "https://api.themoviedb.org/3/trending/movie/week";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -125,7 +123,7 @@ export const getMovieTrendingWeek = () => async dispatch => {
 
 export const getMovieSearch = (id) => async dispatch => {
   const api = "https://api.themoviedb.org/3/search/movie?query="+id;
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -154,7 +152,7 @@ export const getMovieSearch = (id) => async dispatch => {
 
 export const getMovieSimilar = (id) => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/"+id+"/similar";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -184,7 +182,7 @@ export const getMovieSimilar = (id) => async dispatch => {
 
 export const getMovieRecommendation = (id) => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/"+id+"/recommendations";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -214,7 +212,7 @@ export const getMovieRecommendation = (id) => async dispatch => {
 
 export const getMovieCast = (id) => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/"+id+"/credits";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {
@@ -242,7 +240,7 @@ export const getMovieCast = (id) => async dispatch => {
 
 export const getMovieVideo = (id) => async dispatch => {
   const api = "https://api.themoviedb.org/3/movie/"+id+"/videos";
-  const Authorization = `Bearer ${token}`;
+  const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
       headers: {

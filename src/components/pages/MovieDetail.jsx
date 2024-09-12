@@ -62,7 +62,7 @@ export default function MovieDetail() {
             <NavbarComponent/>
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-3">
+                    <div className="col-sm-3">
                         <img className='w-100' alt='' variant="top" src={"https://image.tmdb.org/t/p/w500" + dataMovies.poster_path}/>
                     </div>
                     <div className="col-md-9">
