@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getMovieCast, getMovieRecommendation, getMovieSimilar, getMovieVideo } from '../../redux/actions';
 import VideoTrailer from '../organisms/Player';
+import { token } from '../../token/token';
 
 export default function MovieDetail() {
     const { id } = useParams()
@@ -27,7 +28,7 @@ export default function MovieDetail() {
     },[id]); 
 
     const getData = async() =>{
-      const Authorization = `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZGVjNjY2ZThiZDBlMzUxOTA4NzMzZTg5ZDExZDNmMSIsIm5iZiI6MTcyNTk1MjkxNy42OTk1NTIsInN1YiI6IjY2ZGZlZGQ2MDAwMDAwMDAwMDU4ODY0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5dsa3RPjGXlFKXTatCxDoNBWfKuSkkeoNX0LXdPbOgE`;
+      const Authorization = `Bearer ${token}`;
       try {
         const dataAPI = await fetch("https://api.themoviedb.org/3/movie/" + id, {
           headers: {

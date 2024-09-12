@@ -15,38 +15,6 @@ export default function Search() {
     }, [dispatch, id]);
     const dataMovie = dataMovieTemp.getMovieReducer.dataSearch
 
-    // const [dataMovie, setDataMovie] = useState([])
-    // useEffect(() => {
-    //     getData()
-    //     window.scrollTo(0, 0);
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // },[query]); 
-
-    // const getData = async() =>{
-    //   const Authorization = `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZGVjNjY2ZThiZDBlMzUxOTA4NzMzZTg5ZDExZDNmMSIsIm5iZiI6MTcyNTk1MjkxNy42OTk1NTIsInN1YiI6IjY2ZGZlZGQ2MDAwMDAwMDAwMDU4ODY0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5dsa3RPjGXlFKXTatCxDoNBWfKuSkkeoNX0LXdPbOgE`;
-    //   try {
-    //     const dataAPI = await fetch("https://api.themoviedb.org/3/search/movie?query=" + query, {
-    //       headers: {
-    //         Authorization: Authorization
-    //       }
-    //     })
-    //     const result = await dataAPI.json(dataAPI)
-
-    //     const filteredData = result.results.filter(movie => movie.poster_path).map(movie => ({
-    //         id: movie.id,
-    //         title: movie.title,
-    //         overview: movie.overview,
-    //         poster_path: "https://image.tmdb.org/t/p/w500"+movie.poster_path,
-    //         popularity: movie.popularity,
-    //         rate: movie.vote_average
-    //     })).sort((a, b) => b.rate - a.rate);
-
-    //     setDataMovie(filteredData);
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
-
     return (
         <>
             <NavbarComponent/>

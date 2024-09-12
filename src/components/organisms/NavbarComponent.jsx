@@ -34,8 +34,6 @@ export default function NavbarComponent() {
                     <Offcanvas.Body>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
                             <Nav.Link href="/trending">Trending</Nav.Link>
-                            {/* <Nav.Link href="/movies">Movies</Nav.Link> */}
-                            {/* <Nav.Link href="/tvseries">TV Series</Nav.Link> */}
                         </Nav>
                         <Form className="d-flex" onSubmit={handleSearchSubmit}>
                             <Form.Control

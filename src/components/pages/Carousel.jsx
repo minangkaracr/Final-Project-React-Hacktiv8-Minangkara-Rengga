@@ -88,35 +88,6 @@ const settings = {
   };
 
 export default function Carousel({allDataMovie, title}) {
-    // const [dataMovie, setDataMovie] = useState([])
-    // useEffect(() => {
-    //   getData()
-    //   console.log(linkAPI)
-    // }, []);// eslint-disable-line react-hooks/exhaustive-deps
-    // const getData = async() =>{
-    //   const Authorization = `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZGVjNjY2ZThiZDBlMzUxOTA4NzMzZTg5ZDExZDNmMSIsIm5iZiI6MTcyNTk1MjkxNy42OTk1NTIsInN1YiI6IjY2ZGZlZGQ2MDAwMDAwMDAwMDU4ODY0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5dsa3RPjGXlFKXTatCxDoNBWfKuSkkeoNX0LXdPbOgE`;
-    //   try {
-    //     const dataAPI = await fetch(linkAPI, {
-    //       headers: {
-    //         Authorization: Authorization
-    //       }
-    //     })
-    //     const result = await dataAPI.json(dataAPI)
-
-    //     const filteredData = result.results.filter(movie => movie.poster_path).map(movie => ({
-    //         id: movie.id,
-    //         title: movie.title,
-    //         overview: movie.overview,
-    //         poster_path: "https://image.tmdb.org/t/p/w500"+movie.poster_path,
-    //         popularity: movie.popularity,
-    //         rate: movie.vote_average
-    //     })).sort((a, b) => b.rate - a.rate);
-  
-    //     setDataMovie(filteredData);
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
     const dataMovie = allDataMovie
     
 
