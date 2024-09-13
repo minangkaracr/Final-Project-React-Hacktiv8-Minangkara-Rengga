@@ -8,7 +8,7 @@ export default function NavbarComponent() {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        navigate(`/search/${searchValue}`);
+        navigate(`/search/${searchValue}/page/1`);
     }
 
     const handleSearchChange = (event) => {
@@ -19,7 +19,9 @@ export default function NavbarComponent() {
         <>
             <Navbar expand="md" className="bg-warning mb-3 sticky-top">
                 <Container>
-                    <Navbar.Brand href="/"><strong>DBMovie</strong></Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <strong>📽️Cineverse</strong>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
                     <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-md`}

@@ -2,6 +2,7 @@ import CardComponent from "../molecules/CardComponent";
 import HeaderTitle from "../molecules/HeaderTitle";
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux';
+// import { Pagination } from "react-bootstrap";
 
 
 export default function TrendingComponent({title}) {
@@ -12,9 +13,14 @@ export default function TrendingComponent({title}) {
         <>
             <div className="container my-4">
                 <div className="row">
-                    <HeaderTitle
-                        title={title}
-                    />
+                    <div className="col-sm-8">
+                        <HeaderTitle
+                            title={title}
+                        />
+                    </div>
+                    <div className="col-sm-4">
+                        {/* <Pagination size="sm">{items}</Pagination> */}
+                    </div>
                 </div>
                 <div className="row justify-content-between">
                     {dataMovie.map((movie) => (

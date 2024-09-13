@@ -15,7 +15,8 @@ export const getMovieNowPlaying = () => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -45,7 +46,8 @@ export const getMovieTopRated = () => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -75,7 +77,8 @@ export const getMovieTrendingDay = () => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -108,7 +111,8 @@ export const getMovieTrendingWeek = () => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -121,8 +125,8 @@ export const getMovieTrendingWeek = () => async dispatch => {
   }
 }
 
-export const getMovieSearch = (id) => async dispatch => {
-  const api = "https://api.themoviedb.org/3/search/movie?query="+id;
+export const getMovieSearch = (id, page) => async dispatch => {
+  const api = "https://api.themoviedb.org/3/search/movie?query="+id+"&page="+page;
   const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
   try {
     const dataAPI = await fetch(api, {
@@ -138,7 +142,8 @@ export const getMovieSearch = (id) => async dispatch => {
         overview: movie.overview,
         poster_path: "https://image.tmdb.org/t/p/w500"+movie.poster_path,
         popularity: movie.popularity,
-        rate: movie.vote_average
+        rate: movie.vote_average,
+        vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
     dispatch({
@@ -167,7 +172,8 @@ export const getMovieSimilar = (id) => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -197,7 +203,8 @@ export const getMovieRecommendation = (id) => async dispatch => {
       overview: movie.overview,
       poster_path: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
       popularity: movie.popularity,
-      rate: movie.vote_average
+      rate: movie.vote_average,
+      vote_count: movie.vote_count
     })).sort((a, b) => b.rate - a.rate);
 
 
@@ -251,6 +258,7 @@ export const getMovieVideo = (id) => async dispatch => {
       // Filter YouTube videos and sort by published_at
       const youtubeVideos = data.results
           .filter(video => video.site === 'YouTube')
+          .filter(video => video.type === 'Trailer')
           .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 
       // Get the most recent YouTube video (if any)

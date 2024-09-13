@@ -31,7 +31,7 @@ const settings = {
     dots: true,                 // Menampilkan indikator pagination
     infinite: true,             // Carousel loop
     speed: 500,                 // Kecepatan transisi
-    slidesToShow: 5,            // Menampilkan 5 item sekaligus
+    slidesToShow: 8,            // Menampilkan 5 item sekaligus
     slidesToScroll: 1,          // Geser 1 item per kali geser
     nextArrow: <NextArrow />,   // Custom Next Arrow component
     prevArrow: <PrevArrow />,   // Custom Prev Arrow component
@@ -39,7 +39,7 @@ const settings = {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 4,      // Tampilkan 4 item di layar besar
+          slidesToShow: 6,      // Tampilkan 4 item di layar besar
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -48,7 +48,7 @@ const settings = {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,      // Tampilkan 4 item di layar besar
+          slidesToShow: 6,      // Tampilkan 4 item di layar besar
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -57,7 +57,7 @@ const settings = {
       {
         breakpoint: 990,
         settings: {
-          slidesToShow: 2,      // Tampilkan 2 item di layar sedang
+          slidesToShow: 5,      // Tampilkan 2 item di layar sedang
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -66,7 +66,7 @@ const settings = {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1,      // Tampilkan 1 item di layar kecil
+          slidesToShow: 3,      // Tampilkan 1 item di layar kecil
           slidesToScroll: 1,
           initialSlide: 0,      // Mulai dari slide pertama
           centerMode: true,     // Aktifkan centering
@@ -76,7 +76,17 @@ const settings = {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,      // Tampilkan 1 item di layar kecil
+          slidesToShow: 3,      // Tampilkan 1 item di layar kecil
+          slidesToScroll: 1,
+          initialSlide: 0,      // Mulai dari slide pertama
+          centerMode: true,     // Aktifkan centering
+          centerPadding: "10px"
+        },
+      },
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 2,      // Tampilkan 1 item di layar kecil
           slidesToScroll: 1,
           initialSlide: 0,      // Mulai dari slide pertama
           centerMode: true,     // Aktifkan centering

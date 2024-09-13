@@ -3,6 +3,7 @@ import NavbarComponent from '../organisms/NavbarComponent';
 import {useDispatch, useSelector} from 'react-redux';
 import { getMovieNowPlaying, getMovieTopRated, getMovieTrendingDay } from "../../redux/actions";
 import { useEffect } from "react";
+// import Tophompage from "../organisms/TopHompage";
 
 export default function Homepage() {
     const dispatch = useDispatch()
@@ -18,6 +19,7 @@ export default function Homepage() {
     return (
         <>        
             <NavbarComponent/>
+            {/* <Tophompage/> */}
             <Carousel
                 title = "Now Playing"
                 allDataMovie={dataMovie.getMovieReducer.dataNowPlaying}

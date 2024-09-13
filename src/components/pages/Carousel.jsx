@@ -89,7 +89,6 @@ const settings = {
 
 export default function Carousel({allDataMovie, title}) {
     const dataMovie = allDataMovie
-    
 
     return (
         <>
@@ -107,6 +106,7 @@ export default function Carousel({allDataMovie, title}) {
                                 link={movie.poster_path}
                                 name={movie.title}
                                 rate={movie.rate}
+                                vote_count={movie.vote_count}
                             />
                           </Link>
                         ))}

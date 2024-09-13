@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMovieCast, getMovieRecommendation, getMovieSimilar, getMovieVideo } from '../../redux/actions';
 import VideoTrailer from '../organisms/Player';
 import { token } from '../../token/token';
+import HeaderTitle from '../molecules/HeaderTitle';
 
 export default function MovieDetail() {
     const { id } = useParams()
@@ -61,27 +62,36 @@ export default function MovieDetail() {
         <>
             <NavbarComponent/>
             <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-sm-3">
+                <div className="row">
+                    <div className="col-md-4 justify-content-center align-content-center">
                         <img className='w-100' alt='' variant="top" src={"https://image.tmdb.org/t/p/w500" + dataMovies.poster_path}/>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-8">
                         <div className="row">
-                            <h1>{dataMovies.title + " (" + dataMovies.year +")"}</h1>
+                            <HeaderTitle title={dataMovies.title + " (" + dataMovies.year +")"}/>
+                            {/* <h1>{dataMovies.title + " (" + dataMovies.year +")"}</h1> */}
                         </div>
                         <div className='row'>
-                            <p>{dataMovies.release_date + " | " + dataMovies.runtime + " minutes | " + dataMovies.genres}</p>
+                            <p>{"Release Date: "+ dataMovies.release_date + " | Time: " +dataMovies.runtime + " minutes | Genres: " + dataMovies.genres}</p>
                         </div>
                         <div className="row">
+                            {/* <HeaderTitle title="Overview:"/> */}
                             <h3>Overview:</h3>
                         </div>
                         <div className='row'>
                             <p>{dataMovies.overview}</p>
                         </div>
+                        <div className='row'>
+                            <div className='col-md-8'>
+                                <VideoTrailer 
+                                    id={dataMovie.getMovieReducer} 
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <VideoTrailer 
+                    {/* <VideoTrailer 
                         id={dataMovie.getMovieReducer} 
-                    />
+                    /> */}
                     <CarouselCast
                         title = "Top Cast"
                         allDataMovie={dataMovie.getMovieReducer.dataCast}
