@@ -8,8 +8,6 @@ import Search from './components/pages/Search';
 function App() {
   return (
     <div className="App">
-      {/* <Homepage/> */}
-      {/* <MovieDetail/> */}
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/trending" element={<Trending/>}/>

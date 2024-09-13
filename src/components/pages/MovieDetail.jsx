@@ -7,7 +7,6 @@ import {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getMovieCast, getMovieRecommendation, getMovieSimilar, getMovieVideo } from '../../redux/actions';
 import VideoTrailer from '../organisms/Player';
-import { token } from '../../token/token';
 import HeaderTitle from '../molecules/HeaderTitle';
 
 export default function MovieDetail() {
@@ -29,7 +28,7 @@ export default function MovieDetail() {
     },[id]); 
 
     const getData = async() =>{
-      const Authorization = `Bearer ${token}`;
+      const Authorization = `Bearer ${process.env.REACT_APP_TOKEN}`;
       try {
         const dataAPI = await fetch("https://api.themoviedb.org/3/movie/" + id, {
           headers: {
@@ -63,10 +62,10 @@ export default function MovieDetail() {
             <NavbarComponent/>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-4 justify-content-center align-content-center">
+                    <div className="col-md-6 col-lg-4 justify-content-center align-content-center">
                         <img className='w-100' alt='' variant="top" src={"https://image.tmdb.org/t/p/w500" + dataMovies.poster_path}/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-6 col-lg-8">
                         <div className="row">
                             <HeaderTitle title={dataMovies.title + " (" + dataMovies.year +")"}/>
                             {/* <h1>{dataMovies.title + " (" + dataMovies.year +")"}</h1> */}
@@ -82,7 +81,7 @@ export default function MovieDetail() {
                             <p>{dataMovies.overview}</p>
                         </div>
                         <div className='row'>
-                            <div className='col-md-8'>
+                            <div className='col-md-12 col-lg-8'>
                                 <VideoTrailer 
                                     id={dataMovie.getMovieReducer} 
                                 />
