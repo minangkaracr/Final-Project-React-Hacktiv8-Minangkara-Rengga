@@ -15,7 +15,7 @@ export default function Tophompage() {
                                 title="Top Movies Today"
                             />
                             <div>
-
+                                
                             </div>
                         </div>  
                         <div style={{
@@ -37,6 +37,9 @@ export default function Tophompage() {
                         sadkashjk
                     </div>
                 </div>
+                {/* <div className="row">
+                    <img src="https://storage.googleapis.com/fastwork-static/6b3b2b7f-8551-4241-aa77-9be946342635.jpg" alt="asdsa" />
+                </div> */}
                 {/* <Carousel>
                     <Carousel.Item>
                         <div className="row">

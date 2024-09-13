@@ -1,6 +1,6 @@
 // import popularity from '../../images/popularity.png';
-import Carousel from './Carousel';
-import CarouselCast from './CarouselCast';
+import Carousel from '../organisms/Carousel';
+import CarouselCast from '../organisms/CarouselCast';
 import NavbarComponent from '../organisms/NavbarComponent';
 import {useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react'

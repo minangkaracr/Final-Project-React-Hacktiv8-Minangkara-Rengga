@@ -1,4 +1,4 @@
-import Carousel from "./Carousel";
+import Carousel from "../organisms/Carousel";
 import NavbarComponent from '../organisms/NavbarComponent';
 import {useDispatch, useSelector} from 'react-redux';
 import { getMovieNowPlaying, getMovieTopRated, getMovieTrendingDay } from "../../redux/actions";
