@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import NavbarComponent from '../organisms/NavbarComponent';
+// import NavbarComponent from '../organisms/NavbarComponent';
 import TrendingComponent from "../organisms/TrendingComponent";
 import { useEffect } from 'react';
 import { getMovieTrendingWeek } from '../../redux/actions';
@@ -12,7 +12,7 @@ export default function Homepage() {
     }, [dispatch]);
     return (
         <>        
-            <NavbarComponent/>
+            {/* <NavbarComponent/> */}
             <TrendingComponent
                 allDataMovie={dataMovie.getMovieReducer.dataTrendingDay}
                 title = "Top Trending This Week"

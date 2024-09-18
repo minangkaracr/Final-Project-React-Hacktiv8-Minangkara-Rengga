@@ -1,7 +1,7 @@
 // import popularity from '../../images/popularity.png';
 import Carousel from '../organisms/Carousel';
 import CarouselCast from '../organisms/CarouselCast';
-import NavbarComponent from '../organisms/NavbarComponent';
+// import NavbarComponent from '../organisms/NavbarComponent';
 import {useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,7 +19,6 @@ export default function MovieDetail() {
         dispatch(getMovieCast(id))
         dispatch(getMovieVideo(id))
     }, [dispatch, id]);
-    console.log(dataMovie.getMovieReducer.dataVideo)
     const [dataMovies, setDataMovie] = useState([])
     useEffect(() => {
         getData()
@@ -59,7 +58,7 @@ export default function MovieDetail() {
 
     return (
         <>
-            <NavbarComponent/>
+            {/* <NavbarComponent/> */}
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-lg-4 justify-content-center align-content-center">

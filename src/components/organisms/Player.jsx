@@ -4,7 +4,7 @@ import HeaderTitle from '../molecules/HeaderTitle';
 
 const VideoTrailer = (id) => {
     const value = id.id.dataVideo
-    console.log(value)
+    // console.log(value)
   return (
     <>
         <HeaderTitle title="Trailer"/>

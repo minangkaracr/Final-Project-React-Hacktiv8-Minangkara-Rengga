@@ -9,6 +9,7 @@ const initialState = {
     dataCast:[],
     dataSearch:[],
     dataVideo:"",
+    isLoading: false
 };
 
 export const getMovieReducer = (state = initialState, action) => {
@@ -57,6 +58,11 @@ export const getMovieReducer = (state = initialState, action) => {
             ...state,
             dataVideo: action.payload
         };
-    } 
+    } else if (action.type === 'SET_LOADING') {
+        return {
+            ...state,
+            isLoading: action.payload
+        };
+    }
     return state;
 };

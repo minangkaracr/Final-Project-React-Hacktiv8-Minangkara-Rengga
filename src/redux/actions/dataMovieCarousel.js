@@ -24,6 +24,7 @@ export const getMovieNowPlaying = () => async dispatch => {
       type: 'SET_MOVIE_NOW_PLAYING',
       payload: filteredData
     })
+
   } catch (error) {
     console.log(error)
   }
@@ -277,3 +278,9 @@ export const getMovieVideo = (id) => async dispatch => {
   }
 }
 
+export const isLoading = (value) => dispatch => {
+  dispatch({
+    type: 'SET_LOADING',
+    payload: value
+  })
+}

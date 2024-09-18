@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import NavbarComponent from "../organisms/NavbarComponent";
+// import NavbarComponent from "../organisms/NavbarComponent";
 import {Link, useParams} from 'react-router-dom';
 import HeaderTitle from "../molecules/HeaderTitle";
 import CardComponent from "../molecules/CardComponent";
@@ -24,7 +24,7 @@ export default function Search() {
 
     return (
         <>
-            <NavbarComponent/>
+            {/* <NavbarComponent/> */}
             <div className="container my-4">
                 <div className="row">
                     <div className="col-md-8">
